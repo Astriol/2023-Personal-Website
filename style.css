@@ -2,12 +2,19 @@ body {
   background-color: #0c212b;
   background-image: url("images/trees2.png");
   color: white;
-  margin: 0px;
+  margin: 0;
   font-family: 'Puritan', sans-serif;
   height: 1000px; /* You must set a specified height */
   background-position:  center top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+  overflow-x: hidden;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
 }
 
 h1 {
@@ -15,64 +22,85 @@ h1 {
 }
 
 p {
+  font-size: 1em;
+}
+
+ul {
+padding: 0;
+    margin: 50px 20px;
+    list-style: none;
+}
+
+ul li {
+    display: inline;
+}
+
+ul li img {
+    display: block;
+}
+
+input[type=text], select, textarea {
+  color: black !important;
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.about-me-blurb {
   font-size: 1.5em;
+}
+
+/* Style the active class (and buttons on mouse-over) */
+.active, .btn:hover {
+  background-color: #00494d !important;
+  color: white;
+}
+
+.carousel-style {
+  width: 100%;
+  height: 500px;
 }
 
 .center-text{
   text-align: center;
+  padding: 20px 0 0 0;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
   padding: 20px;
 }
 
-.home-page {
-  margin: 100px 0px 200px 0px;
+.code-icon {
+  width: 25%;
+  margin: 10%;
 }
 
-.section-title {
-  margin: 100px 0px 0px 0px;
-}
 
-.logo-hero {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
-.hobbies {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-  .mid-rec{
-    height: 240px;
-    width: 400px;
-    position: absolute;
-    background-color: white !important;
-    color: black;
-    padding: 50px;
-    margin: 20px;
-    text-align: center;
-  }
-
-  .top-rec {
-    height: 240px;
-    width: 400px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #00494d;
-    position: relative;
-    margin: 20px;
-  }
-
-  .top-rec:hover {
-  position: relative;
-  top:-20px;
-  left: -20px;
-}
-
-.work {
-  margin: 30px 50px
+.degree {
+  font-size: 16px;
 }
 
 .education-icons {
@@ -82,60 +110,748 @@ p {
   width: 60%;
 }
 
-.knowledge-icons {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
+.education-section {
+  display: none;
+}
+
+.ed-box {
+  background-color: white;
+  opacity: 60%;
+  color: #00494d;
+  padding: 10px;
+  text-align: left;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.home-page {
+  margin: 120px 0 100px 0;
+}
+
+.hobbies {
+  display: inline-flex;
+  margin: auto;
+  padding-top: 5%;
+}
+
+.icon-buttons {
+  display: none;
 }
 
 .icon-hover:hover {
   opacity: 50%;
 }
 
-.hide {
+.knowledge {
+  margin: 2% 0 0 0;
+}
+
+.knowledge-icons {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+  height: 100%;
+  text-align: center;
+}
+
+.knowledge-lists {
   display: none;
 }
 
-.scroller {
-    height: 300px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+.logo-hero {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
 }
 
-.scroller section {
-    scroll-snap-align: start;
+.portfolio {
+  max-width: 75%;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+  }
+
+.portfolio-button {
+  font-size: 20px;
+  background-color: #0c212b;
+  padding: 5px 25px;
+  margin: 0 20px;
+  color: white;
+  border: 0px;
+  border-radius: 8px;
+}
+
+.portfolio-button:hover {
+  background-color: #00494d;
+}
+
+.portfolio-image:hover{
+  transform: scale(2);
+}
+
+.portfolio-image-horizontal:hover{
+  transform: scale(3);
+}
+
+.portfolio-image-top:hover {
+  transform: translate(12px, 50%) scale(2);
+}
+
+.portfolio-image-bottom:hover {
+  transform: translate(12px, -60%) scale(2);
+}
+
+.portfolio-image-bottom-semi:hover {
+  transform: translate(12px, -40%) scale(2);
+}
+
+.portfolio-image-bottom-semi:hover {
+  transform: translate(12px, -50%) scale(2);
+}
+
+.portfolio-image-horizontal:hover{
+  transform: scale(3);
+}
+
+.portfolio-image-horizontal-top:hover{
+  transform: translate(12px, 100%) scale(3);
+}
+
+.portfolio-image-horizontal-bottom:hover{
+  transform: translate(12px, -70%) scale(3);
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+.section-title {
+  margin: 2% 0 0 0;
+}
+
+.websites {
+  margin: 5% 0 0 0;
+}
+
+.website-image {
+  margin: 0 0 5% 0
+}
+
+  .website-title {
+    color:#0c212b;
+  }
+
+.work-box {
+  margin: 5%;
+  background-color: white;
+  opacity: 70%;
+  color: #00494d;
+  padding: 10px;
+  text-align: center;
+}
+
+.work-grid {
+  background-color: none;
+}
+
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 20%; /* IE10 */
+  flex: 20%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.art-column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.knowledge-lists {
+  display: none;
 }
 
 #about-me {
-  margin: 0px 100px;
+  margin: 100px 100px 0 100px;
 }
 
-#work {
-  margin: 50px;
+#art {
+  display: none;
 }
 
-#education {
-  position: relative;
-  background-color:rgb(14,19,20,0.7);
-  padding: 50px;
+#art-carousel {
+  display: none;
 }
 
-#knowledge {
-  margin: 50px;
+#contact-background{
+  background-image: url("images/forest.jpg");
+  width: 100%; /* You must set a specified height */
+  background-position:  center top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  padding: 125px;
+}
+
+#design-carousel {
+  display: none;
 }
 
 #download-icon {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 50%;
+}
+
+#education {
+  padding: 50px;
+}
+
+#hobbies {
+  padding: 20px;
+}
+
+#knowledge-icons-block {
+  margin-bottom: 8%;
+}
+
+#photography {
+  display: none;
+}
+
+#photography-carousel {
+  display: none;
+}
+
+#portfolios{
+  padding: 100px 0;
+}
+
+#portfolio-title {
+  padding: 0 10%;
+}
+
+#portrait {
+  display: block;
+}
+
+#website-box {
+  background-image: url(images/foggy-mountains.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#website-title {
+  padding: 10px;
+}
+
+#work {
+  margin: 50px 0px;
 }
 
 #work-background {
   background-image: url("images/conifers.png");
-  height: 1000px; /* You must set a specified height */
+  background-position:  center top; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+@media screen and (max-width: 1500px) {
+  .knowledge-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+  }
+  
+  .knowledge-lists {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .column {
+    -ms-flex: 20%;
+    flex: 20%;
+    max-width: 20%;
+  }
+
+  .art-column {
+    -ms-flex: 25%; /* IE10 */
+    flex: 25%;
+    max-width: 25%;
+  }
+
+  .button-group {
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .code-icon {
+    width: 15%;
+    margin: 5% 16%;
+  }
+
+  .hobbies-b {
+    width: 10%;
+    padding-bottom: 5%;
+  }
+
+  .home-page {
+    margin: 90px 0 30px 0;
+  }
+
+  .icon-buttons {
+    display: none;;
+  }
+
+  .knowledge {
+    margin: 5% 0 0 0;
+  }
+
+  .knowledge-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+  }
+
+  .knowledge-lists {
+    display: none;
+  }
+
+  .portfolio-button {
+    font-size: 20px;
+    background-color: #0c212b;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+  }
+
+  .portfolio-image:hover{
+    transform: scale(3);
+  }
+
+  .portfolio-image-horizontal:hover{
+    transform: scale(3);
+  }
+
+  .portfolio-image-top:hover {
+    transform: translate(12px, 50%) scale(2.5);
+  }
+
+  .portfolio-image-bottom:hover {
+    transform: translate(12px, -60%) scale(2.5);
+  }
+
+  .portfolio-image-bottom-semi:hover {
+    transform: translate(12px, -40%) scale(3);
+  }
+
+  .portfolio-image-bottom-semi:hover {
+    transform: translate(12px, -50%) scale(2.5);
+  }
+
+  .portfolio-image-horizontal:hover{
+    transform: scale(3);
+  }
+
+  .portfolio-image-horizontal-top:hover{
+    transform: translate(12px, 100%) scale(3);
+  }
+
+  .portfolio-image-horizontal-bottom:hover{
+    transform: translate(12px, -70%) scale(3);
+  }
+
+  .portrait img {
+    display: none !important;
+  }
+
+  .section-title {
+    margin-top: 50px;
+  }
+  }
+
+  .work {
+    margin: 20px 0;
+  }
+
+  #about-me{
+    margin: 0px 100px;
+  }
+
+  #design-carousel {
+    display: none;
+  }
+
+  #download-icon {
+    width: 8%;
+  }
+
+  #knowledge-icons-block {
+    margin-bottom: 5%;
+  }
+
+#portfolios {
+  padding: 60px;
+}
+
+  #portfolio-title {
+    padding:0;
+    text-align: center;
+  }
+
+#portrait {
+  display: none
+}
+
+  #work {
+    margin: 0;
+  }
+
+}
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  p {
+    font-size: 1em;
+  }
+
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+
+  .education-icons {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(.75)
+  }
+
+  .hobbies-b {
+    display: inline-flex;
+    margin: auto;
+    transform: scale(1);
+  }
+
+  .home-page {
+    margin: 25px;
+  }
+
+  .icon-buttons {
+    display: none;;
+  }
+
+  .knowledge-lists {
+    display: none;
+  }  
+
+  .large-portfolio {
+    display: none;
+  }
+  
+  .portfolio {
+    max-width: 100%;
+  }
+
+  .portfolio-button {
+    font-size: 20px;
+    background-color: #0c212b;
+    border: white;
+    padding: 10px;
+    color: white;
+  }
+
+.portfolio-image:hover{
+  transform: scale(2);
+}
+
+.portfolio-image-horizontal:hover{
+  transform: scale(2);
+}
+
+.portfolio-image-top:hover {
+  transform: scale(2);
+}
+
+.portfolio-image-bottom:hover {
+  transform: scale(2);
+}
+
+.portfolio-image-bottom-semi:hover {
+  transform: scale(2);
+}
+
+.portfolio-image-bottom-semi:hover {
+  transform: scale(2);
+}
+
+.portfolio-image-horizontal:hover{
+  transform: scale(2);
+}
+
+.portfolio-image-horizontal-top:hover{
+  transform:  scale(2);
+}
+
+.portfolio-image-horizontal-bottom:hover{
+  transform: scale(2);
+}
+
+#about-me {
+  margin: 100px 50px 0 50px;
+}
+
+#design-carousel {
+  display: inherit;
+  margin-bottom: 5%;
+}
+
+#download-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
+#education {
+  padding: 50px;
+}
+
+#knowledge{
+  padding-top: 5px;
+}
+
+#work {
+  margin: 5%;
+}
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 768px) {
+
+body {
+  background-color: #0c212b;
+  background-image: url("images/trees2.png");
+  color: white;
+  margin: 0;
+  font-family: 'Puritan', sans-serif;
+  height: 300px;
   background-position:  center top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: contain; /* Resize the background image to cover the entire container */
+}
+
+ul {
+  margin: 1em;
+  list-style-type: circle;
+  padding: 1em;
+
+}
+  
+ul li {
+    display: block;
+    list-style-type: circle;
+    margin: 1em;
+    padding: .5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+
+.btn-icon {
+  margin: 0 5px;
+}
+
+.code-icon {
+  width: 15%;
+}
+
+.column {
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+}
+
+.degree {
+    padding: .25% 0;
+}
+
+
+.ed-box {
+  text-align: center;
+}
+
+.education-icons {
+  display: none;
+}
+
+.home-page {
+    margin: 0;
+}
+
+
+.icon-buttons {
+  display: none;;
+}
+
+.knowledge {
+  text-align: center;
+}
+
+.knowledge-section {
+  display:block;
+}
+
+.knowledge-icons {
+    display: none;
+}
+
+.knowledge-lists {
+  display:block;
+  margin: 0px;
+}
+
+.list-section {
+  font-size: 24px;
+  color: #aec1d4;
+}
+
+.logo-hero {
+    margin-top:10% !important;
+    width: 75% !important;
+}
+
+.phone-center-title {
+    text-align: center;
+    padding-top: 5%;
+}
+
+.section-title {
+    margin: 0;
+}
+
+
+#about-me {
+    margin: 0;
+}
+
+#contact-background {
+    padding: 0;
+}
+
+#education {
+    padding: 25px 0 !important;
+}
+
+#work {
+    margin: 0;
+}
+
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 480px) {
+
+
+  h1{
+    font-size: 20px;;
+  }
+
+  ul li {
+    display: block;
+    list-style-type: circle;
+    margin: 1em;
+    padding: .2em;
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .about-me-blurb {
+    font-size: 1em;
+  }
+
+  .carousel-container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 2px;
+  }
+
+  .code-icon {
+    width: 50%;
+    text-align: center;
+    margin-left: 25%;
+  }
+
+  .icon-buttons {
+    display: inline;
+  }
+
+  .knowledge {
+    margin-top: 25%;
+  }
+
+  .knowledge-lists {
+    display:block;
+    margin: -50px;
+    padding: 0px;
+  }
+
+  .phone-center-title {
+    margin: 15% 15% 0 15%;
+  }
+
+  .first-icon {
+    display: block;
+  }
+
+  .section-divide {
+    display: none;
+  }
+
+  .word-button {
+    display: none;
+  }
+
+  #coding {
+    margin-bottom: 10%;
+  }
+
+  #portfolios {
+    padding: 5px;
+  }
+
+  #work {
+    margin: -20%
+  }
+
+ 
 }
