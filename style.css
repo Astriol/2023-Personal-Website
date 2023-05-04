@@ -352,10 +352,6 @@ input[type=submit]:hover {
   padding: 0 10%;
 }
 
-#portrait {
-  display: block;
-}
-
 #website-box {
   background-image: url(images/foggy-mountains.jpg);
   background-size: cover;
@@ -489,10 +485,6 @@ input[type=submit]:hover {
     transform: translate(12px, -70%) scale(3);
   }
 
-  .portrait img {
-    display: none !important;
-  }
-
   .section-title {
     margin-top: 50px;
   }
@@ -518,6 +510,10 @@ input[type=submit]:hover {
     margin-bottom: 5%;
   }
 
+  #my-portrait {
+    display: none;
+  }
+
 #portfolios {
   padding: 60px;
 }
@@ -526,10 +522,6 @@ input[type=submit]:hover {
     padding:0;
     text-align: center;
   }
-
-#portrait {
-  display: none
-}
 
   #work {
     margin: 0;
