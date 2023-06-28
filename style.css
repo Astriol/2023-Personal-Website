@@ -76,9 +76,17 @@ input[type=submit]:hover {
   color: white;
 }
 
+.carousel-container {
+  background-color: #0c212a00;
+}
+
 .carousel-style {
   width: 100%;
   height: 500px;
+}
+
+.carousel-indicators {
+  bottom: -10px;
 }
 
 .center-text{
@@ -305,12 +313,11 @@ input[type=submit]:hover {
 }
 
 #contact-background{
-  background-image: url("images/forest.jpg");
+  background-image: url("images/forest.png");
   width: 100%; /* You must set a specified height */
   background-position:  center top; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  padding: 125px;
 }
 
 #design-carousel {
@@ -709,6 +716,10 @@ ul li {
     margin: 0;
 }
 
+.hobbies {
+  display: none;
+}
+
 
 .icon-buttons {
   display: none;;
@@ -750,6 +761,10 @@ ul li {
     margin: 0;
 }
 
+.websites {
+  text-align: center;
+}
+
 
 #about-me {
     margin: 0;
@@ -777,10 +792,14 @@ ul li {
     font-size: 20px;;
   }
 
+  h3 {
+    font-size: 20px;
+  }
+
   ul li {
     display: block;
     list-style-type: circle;
-    margin: 1em;
+    margin: .25em;
     padding: .2em;
     text-align: center;
     font-size: 1.5em;
@@ -802,6 +821,14 @@ ul li {
     margin-left: 25%;
   }
 
+  .first-icon {
+    width: 25%;
+  }
+
+  .hobbies {
+    display: none;
+  }
+
   .icon-buttons {
     display: inline;
   }
@@ -817,7 +844,7 @@ ul li {
   }
 
   .phone-center-title {
-    margin: 15% 15% 0 15%;
+    margin: 20% 15% 0 15%;
   }
 
   .first-icon {
@@ -834,6 +861,14 @@ ul li {
 
   #coding {
     margin-bottom: 10%;
+  }
+
+  #download-icon {
+    width: 25%;
+  }
+
+  #hobbies {
+    display: none;
   }
 
   #portfolios {
